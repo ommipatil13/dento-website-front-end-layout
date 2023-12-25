@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> L Css Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            /* font-family: 'Roboto', sans-serif; */
+        }
+
+
+        .topnav {
+            width: 85%;
+            height: 100%;
+            margin: auto;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .topnav a {
+            padding: 5px 10px;
+            color: #707070;
+            text-decoration: none;
+        }
+
+        .right a {
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        .right a:hover {
+            color: #00aeef;
+        }
+
+
+        .nav-bar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: white;
+        }
+
+        .nav-bar nav {
+            display: flex;
+            /* background-color: white; */
+
+            padding: 25px 0px;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            /* box-shadow: 2px 2px 2px 2px black; */
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-bar nav>ul {
+            display: flex;
+            list-style-type: none;
+            /* align-items: center; */
+        }
+
+        .nav-bar nav ul li a {
+            padding: 0 15px;
+            text-decoration: none;
+            color: black;
+            /* font-family: "Montserrat", sans-serif; */
+            font-weight: 550;
+            font-size: 14px;
+        }
+
+        .nav-bar nav ul li a:hover {
+            color: #00aeef;
+            transition: 0.3s;
+        }
+
+        .nav-bar nav button {
+            background-color: #00aeef;
+            color: white;
+            /* font-family: "Montserrat", sans-serif; */
+            font-weight: 550;
+            font-size: 14px;
+            padding: 10px 20px;
+            border: 2px solid #00aeef;
+        }
+
+        .nav-bar nav button:hover {
+            background-color: white;
+            color: #00aeef;
+            /* border: 2px solid #00aeef; */
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+
+
+        .drop-down {
+            /* display: list-item; */
+            position: absolute;
+            display: none;
+            background-color: white;
+            /* background-color: red; */
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+            padding: 5px;
+        }
+
+        .drop-down1:hover .drop-down {
+            display: block;
+        }
+
+        .drop-down li {
+            padding: 10px;
+            list-style-type: none;
+            border-bottom: 1px solid #707070;
+        }
+
+
+
+        .drop-downs {
+
+            position: absolute;
+            display: none;
+            /* background-color: aqua; */
+            padding: 5px;
+            background-color: white;
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+            margin: -40px 130px;
+        }
+
+        .drop-down2:hover .drop-downs {
+            display: block;
+        }
+
+        .drop-downs li {
+            padding: 10px 5px;
+            list-style-type: none;
+            width: 140px;
+            border-bottom: 1px solid #707070;
+        }
+
+
+
+        .drop-downss {
+            /* display: list-item; */
+            position: absolute;
+            display: none;
+            /* background-color: green; */
+            padding: 5px;
+            background-color: white;
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15);
+            margin: -40px 135px;
+        }
+
+        .drop-down3:hover .drop-downss {
+            display: block;
+        }
+
+        .drop-downss li {
+            padding: 10px 5px;
+            list-style-type: none;
+            width: 100px;
+            border-bottom: 1px solid #707070;
+        }
+
+
+        .secondDiv {
+            /* height: 600px;
+            width: 100%; */
+            background-image: url("./images/12.jpg");
+            background-attachment: fixed;
+        }
+
+        .secondDiv1 {
+            background: linear-gradient(to right, #2c455d, #00012c);
+            opacity: 0.85;
+            height: 600px;
+            width: 100%;
+            padding: 120px 180px;
+        }
+
+        .secondDiv1 h1 {
+            color: white;
+            font-size: 60px;
+        }
+
+        .secondDiv1 p {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 30px;
+            line-height: 40px;
+        }
+
+        .btn1st {
+            background-color: #00aeef;
+            color: white;
+            /* font-family: "Montserrat", sans-serif; */
+            font-weight: 500;
+            font-size: 14px;
+            padding: 15px 30px;
+            border: 2px solid #00aeef;
+            margin: 50px 20px;
+            margin-left: 300px;
+        }
+
+        .btn1st:hover {
+            background-color: transparent;
+            cursor: pointer;
+            color: #00aeef;
+            transition: 0.5s;
+        }
+
+        .btn2nd {
+            background-color: transparent;
+            color: #00aeef;
+            /* font-family: "Montserrat", sans-serif; */
+            font-weight: 500;
+            font-size: 14px;
+            padding: 15px 30px;
+            border: 2px solid #00aeef;
+            margin: 50px 20px;
+            margin-right: 300px;
+
+        }
+
+        .btn2nd:hover {
+            background-color: #00aeef;
+            color: white;
+            /* border: 2px solid #00aeef; */
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+
+
+
+        .boxOf2 {
+            width: 50%;
+            float: left;
+            /* background-color: crimson; */
+            height: 700px;
+
+        }
+
+        .boxOf2 img {
+            height: 380px;
+            width: 550px;
+            margin-top: 220px;
+            /* margin-left: 50px; */
+
+        }
+
+        .boxOf1 {
+            float: left;
+            width: 50%;
+            height: 700px;
+            /* background-color: purple; */
+
+        }
+
+        .fullOfBox {
+            background-image: url('./images/13.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .fullOfBox1 {
+
+
+            background: linear-gradient(to right, #2c455d, #00012c);
+            opacity: 0.85;
+            height: 700px;
+            width: 100%;
+
+        }
+
+        .box1Ofdiv {
+            margin-top: 240px;
+            margin-left: 80px;
+        }
+
+        .boxOf1 table tr td {
+            font-size: 18px;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .headerh1 {
+            font-size: 40px;
+            /* color: white; */
+            color: white;
+        }
+
+
+        .btn-3rd {
+            background-color: #00aeef;
+            color: white;
+            /* font-family: "Montserrat", sans-serif; */
+            font-weight: 500;
+            font-size: 14px;
+            padding: 15px 30px;
+            border: 2px solid #00aeef;
+            margin: 100px 450px;
+            margin-top: 60px;
+
+        }
+
+        .btn-3rd:hover {
+            background-color: transparent;
+            cursor: pointer;
+            color: #00aeef;
+            transition: 0.5s;
+        }
+
+
+        .appointment {
+            background: url(./images/3.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .appointment>div {
+            background: linear-gradient(to right, #2c455d, #00012c);
+            opacity: 0.85;
+        }
+
+        .appointment-content {
+            width: 80%;
+            margin: auto;
+            padding: 70px;
+            text-align: center;
+            color: white;
+        }
+
+        .appointment-content form {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .appointment-content input,
+        textarea,
+        select {
+            width: 47.8%;
+            margin: 15px 10px;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 14px;
+            outline: none;
+            border: none;
+        }
+
+        .appointment-content option {
+            background-color: white;
+            color: black;
+        }
+
+        .btn-4rd {
+            background-color: #00aeef;
+            color: white;
+            /* font-family: "Montserrat", sans-serif; */
+            font-weight: 500;
+            font-size: 14px;
+            padding: 10px 25px;
+            border: 2px solid #00aeef;
+            margin: 100px 150px;
+            margin-top: 20px;
+
+        }
+
+        .btn-4rd:hover {
+            background-color: transparent;
+            cursor: pointer;
+            color: #00aeef;
+            transition: 0.5s;
+        }
+
+
+
+        .icons-last {
+            visibility: hidden;
+        }
+
+        .icons-last a:hover {
+            color: #00aeef;
+
+        }
+
+        .aar-paar:hover .icons-last {
+            visibility: visible;
+
+        }
+
+
+
+        .last-Bg1 {
+            background-image: url('./images/15.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .last-Bg2 {
+
+
+            background: linear-gradient(to right, #2c455d, #00012c);
+            opacity: 0.85;
+            height: 350px;
+            width: 100%;
+
+        }
+
+        .last-ka-hover-hai:hover {
+            color: #00aeef;
+        }
+
+
+        footer {
+            background: url(img/background/3.jpg) fixed no-repeat center center/cover;
+        }
+
+        footer>div {
+            background: linear-gradient(to right, #2c455d, #00012c);
+            opacity: 0.85;
+        }
+
+        .footer {
+            width: 80%;
+            margin: auto;
+            padding: 70px 0;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer>div {
+            margin: 20px;
+        }
+
+        .footer h3 {
+            padding-bottom: 20px;
+        }
+
+        .footer-dento p,
+        .footer-dento span {
+            font-size: 14px;
+            line-height: 1.7;
+            padding: 20px 0;
+        }
+
+        .footer-openingHours ul li {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-openingHours span {
+            margin: 0;
+            padding: 0;
+            line-height: 2.5;
+            font-size: 15px;
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .footer-links li {
+            flex: 50%;
+            list-style-type: none;
+        }
+
+        .footer-links a {
+            font-weight: lighter;
+            color: white;
+            line-height: 2.5;
+            font-size: 15px;
+            padding: 0;
+
+            &:hover {
+                color: #00aeef;
+                transition: all 0.3s linear;
+            }
+        }
+
+        .footer-newsletter p {
+            line-height: 1.9;
+            font-size: 14px;
+        }
+
+        .footer-newsletter input {
+            width: 80%;
+            margin: 20px 0;
+            padding: 10px 15px;
+            font-size: 15px;
+            outline: none;
+            border: none;
+        }
+
+        .footer-newsletter #send {
+            background-color: #00aeef;
+            padding: 11px 14px;
+            margin-left: -5px;
+            font-size: 16px;
+            height: 39px;
+
+            &:hover {
+                background-color: #00012c;
+                transition: all 0.3s linear;
+            }
+        }
+
+        .footer-newsletter>div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-newsletter>div i {
+            font-size: 18px;
+            color: white;
+
+            &:hover {
+                color: #00aeef;
+                transition: all 0.3s linear;
+            }
+        }
+
+        .copyright {
+            color: #afafaf;
+            text-align: center;
+            font-size: 12px;
+            padding: 20px;
+        }
+
+        footer a {
+            padding: 10px 15px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+        }
+
+        footer a:hover {
+            color: #00aeef;
+            transition: 300ms;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+
+
+        <div style="background-color: #f4f4f4; height: 40px;">
+            <div class="topnav">
+                <div class="leftForEg">
+                    <a href="#" title="28 Jackson Street, Chicago, 7788569 USA">
+                        <i class="fa-solid fa-location-dot" style="color: #00aeef;"></i> 28 Jackson Street, Chicago,
+                        7788569 USA </a>
+
+                    <a href="#" title="info.dento@gmail.com"><i class="fa-solid fa-envelope"
+                            style="color: #00aeef;"></i>
+                        info.dento@gmail.com</a>
+                </div>
+                <div class="right">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="nav-bar">
+            <nav>
+
+                <img src="./images/logo.png.webp" alt="">
+
+                <ul>
+                    <li><a href="#">HOME</a></li>
+
+                    <li class="drop-down1"><a href="#">PAGES <i class="fa-solid fa-angle-down"></i></a>
+
+                        <ul class="drop-down">
+                            <li><a href="#">- Home</a></li>
+                            <li><a href="#">- About Us</a></li>
+                            <li><a href="#">- Service</a></li>
+                            <li><a href="#">- Pricing</a></li>
+                            <li><a href="#">- Blog</a></li>
+                            <li><a href="#">- Contact</a></li>
+
+                            <li class="drop-down2"><a href="#">- Dropdown <i class="fa-solid fa-angle-right"></i></a>
+                                <ul class="drop-downs">
+                                    <li><a href="#">- Dropdown</a></li>
+                                    <li><a href="#">- Dropdown</a></li>
+
+                                    <li class="drop-down3"><a href="#">- Dropdown <i
+                                                class="fa-solid fa-angle-right"></i></a>
+                                        <ul class="drop-downss">
+                                            <li><a href="#">- Menu</a></li>
+                                            <li><a href="#">- Menu</a></li>
+                                            <li><a href="#">- Menu</a></li>
+                                            <li><a href="#">- Menu</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#">- Dropdown</a></li>
+                                </ul>
+
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">PRICING</a></li>
+
+                    <li class="drop-down1"><a href="#">BLOG <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="drop-down">
+                            <li><a href="#">- Blog</a></li>
+                            <li><a href="#">- Blog Details</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+
+                <button>BOOKING NOW</button>
+
+            </nav>
+        </div>
+
+
+        <div class="secondDiv">
+
+            <div class="secondDiv1">
+                <h1>We Believe Everyone Should Have Easy Access To Great Dental Care</h1>
+                <p>As a leading industry innovator, Dento is opening up exciting new opportunities for dental
+                    professionals, investors, employees & suppliers. Contact us to find out what we have to
+                    offer you.</p>
+                <button class="btn1st">GET STARTED</button> <button class="btn2nd"> CONTACT US</button>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div style=" width: 90%;  display: flex; margin: auto; padding-top: 100px;">
+
+            <div style="width: 45%;">
+                <img src="./images/15.jpg" alt="" style="width: 100%;">
+            </div>
+
+            <div style="width: 55%;  font-size: 20px;padding: 80px 20px;">
+                <h1><span style="border-bottom: 5px solid #00aeef;padding: 10px 0;">Abo</span>ut Us</h1>
+                <p style="padding-top: 80px; font-size: 18px;">Vestibulum condimentum, risus sedones honcus rutrum,
+                    salah lacus mollis
+                    zurna, nec finibusmi velit
+                    advertisis. Proin vitae odin quis magna aliquet laciniae. Etiam auctor, nisi vel. Pellentesque
+                    ultrices nisl quam iaculis, nec pulvinar augue.</p>
+
+                <div style="padding-top: 50px;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <h4>Experience Dentist</h4>
+                        <h4>80%</h4>
+                    </div>
+
+                    <progress max="100" value="80" style="height: 25px; width: 100%;"></progress>
+                </div>
+
+                <div style="padding-top: 25px;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <h4>Modern Equipment </h4>
+                        <h4>65%</h4>
+                    </div>
+
+                    <progress max="100" value="65" style="height: 25px; width: 100%;"></progress>
+                </div>
+
+                <div style="padding-top: 25px;">
+                    <div style="display: flex; justify-content: space-between;">
+
+                        <h4>Friendly Staff
+                        </h4>
+                        <h4>85%</h4>
+                    </div>
+
+                    <progress max="100" value="85" style="height: 25px; width: 100%;"></progress>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div style="width: 90%; border-bottom: 2px solid gray; margin: 0px 70px ; margin-top: 40px;  "></div>
+
+        <div style=" width: 100%; ">
+            <div
+                style="display: flex; justify-content: space-evenly; text-align: center;padding: 60px 0;line-height: 1.5;">
+                <div>
+                    <i class="fa-brands fa-react" style="color: #00aeef; font-size: 60px;"></i>
+                    <h1>20</h1>
+                    <h3> Years Of Experience</h3>
+                </div>
+                <div><i class="fa-regular fa-heart" style="color: #00aeef; font-size: 60px;"></i>
+                    <h1>700+</h1>
+                    <h3> Happy Patients</h3>
+                </div>
+                <div> <i class="fa-solid fa-book" style="color: #00aeef; font-size: 60px;"></i>
+                    <h1>120</h1>
+                    <h3>Certificate</h3>
+                </div>
+                <div>
+                    <i class="fa-regular fa-address-card" style="color: #00aeef; font-size: 60px;"></i>
+                    <h1>40+</h1>
+                    <h3> Dentist</h3>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="fullOfBox">
+            <div class="fullOfBox1">
+                <div class="boxOf1">
+                    <div class="box1Ofdiv">
+                        <h1 class="headerh1"><span style="border-bottom: 5px solid #00aeef;padding: 10px 0;">Our</span>
+                            Services</h1>
+                        <br><br>
+                        <table cellspacing="0" cellPadding="50" width="100%">
+                            <tr>
+                                <td> <img src="./images/s1.png.webp"><br><br>Teeth Whitening </td>
+                                <td> <img src="./images/s2.png.webp"><br><br>Missing Teeth</td>
+                                <td><img src="./images/s3.png.webp"><br><br>Teeth Whitening</td>
+                            </tr>
+                            <tr style="height: 50px;"></tr>
+                            <tr>
+                                <td><img src="./images/s4.png.webp"><br><br>Cosmetic Dentistry</td>
+                                <td> <img src="./images/s5.png.webp"><br><br>Examination</td>
+                                <td><img src="./images/s1.png.webp"><br><br>Teeth Pain</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="boxOf2">
+                    <img src="./images/14.jpg" alt="img1" title="img1_h_vo">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div style="width: 80%;  margin: auto;">
+            <h1 style=" text-align: center;padding-top: 100px;">P<span
+                    style="border-bottom: 5px solid #00aeef;padding: 10px 0;">ricin</span>g</h1>
+
+            <div style="padding-top: 80px; text-align: left;">
+                <table width="100%" cellspacing="0">
+                    <thead style="background-color: #00aeef; color: white; ">
+                        <tr>
+                            <th scope="col" style=" padding: 15px 25px;border: 1px solid white;">
+                                Service Names
+                            </th>
+                            <th scope="col" style="border: 1px solid white;padding: 15px 40px;">Stage</th>
+                            <th scope="col" style="border: 1px solid white;padding: 15px 40px;">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: #f4f4f4;">
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Teeth Whitening
+                                Service
+                                at home</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 times</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$115.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Teeth Whitening
+                                Service
+                                at Dental Clinic</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 times</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$100.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Ceramic crowns and
+                                fillings Dental porcelain</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 times</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$99.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Remove crowns, bridges
+                                Service</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 tooth</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$50.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Covering the recession
+                                of
+                                the gums</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 times</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$400.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Consultation,
+                                impressions
+                                and preparation of
+                                models</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 times</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$35.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Removal of an old
+                                inlay,
+                                old crown</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 times</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$99.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Overlay teeth
+                                whitening (
+                                2 arches)</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 times</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$170.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Standard porcelain and
+                                zirconium crown on implant
+                            </th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 tooth</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$499.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" style=" padding: 15px 25px; border: 1px solid white;">Implantation of an
+                                implant (price depends on
+                                system used)</th>
+                            <td style="border: 1px solid white;padding: 15px 40px;">1 tooth</td>
+                            <td style="border: 1px solid white;padding: 15px 40px;">$600.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="btn-3rd">
+                READ MORE <i class="fa-solid fa-angle-right"></i></button>
+
+
+        </div>
+
+
+
+
+        <div class="appointment">
+            <div>
+                <div class="appointment-content">
+                    <h1 style="margin: auto;">Book an <span
+                            style="border-bottom: 5px solid #00aeef;padding: 10px 0;">Appo</span>intment
+                    </h1>
+
+                    <form>
+                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="Your Phone">
+                        <input type="text" placeholder="Your Email">
+                        <input type="text" placeholder="Your Address">
+
+                        <select>
+                            <option>Choose your Schedule</option>
+                            <option>9AM to 10AM</option>
+                            <option>11AM to 12PM</option>
+                            <option>2PM to 4PM</option>
+                            <option>8PM to 10PM</option>
+                        </select>
+
+                        <select>
+                            <option>Choose your Schedule</option>
+                            <option>9AM to 10AM</option>
+                            <option>11AM to 12PM</option>
+                            <option>2PM to 4PM</option>
+                            <option>8PM to 10PM</option>
+                        </select>
+
+                        <textarea placeholder="Your Message" rows="5" style="width: 100%;"></textarea>
+                    </form>
+
+                    <button class="btn-4rd">BOOKING NOW</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- <div style="width: 80%;  margin: auto;">
+
+            <h1 style=" text-align: center;padding-top: 100px;">Our <span
+                    style="border-bottom: 5px solid #00aeef;padding: 10px 0;">Den</span>tist</h1>
+
+            <div style="padding-top: 100px; display: flex; justify-content: space-between;">
+
+                <div class="aar-paar">
+                    <img src="./images/9.png.webp" alt="" style="width: 330px; background-color: #f4f4f4;">
+
+                    <div style="width: 330px; height: 80px; background: linear-gradient(to right, #2c455d, #00012c);
+                    opacity: 0.85; position: relative; top: -80px; ">
+                        <h3 style="text-align: center; color: white;padding-top: 18px;">Michael Barley</h3>
+                        <p style="text-align: center; color: white;padding-top: 5px;">Implant Expert</p>
+                    </div>
+
+                    <div style="font-size: 20px; text-align: center;position: relative;top: -240px; "
+                        class="icons-last">
+                        <a href="#"><i class="fa-brands fa-facebook"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus-g"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="aar-paar">
+                    <img src="./images/10.png.webp" alt="" style="width: 330px; background-color: #f4f4f4;">
+
+                    <div style="width: 330px; height: 80px; background: linear-gradient(to right, #2c455d, #00012c);
+                    opacity: 0.85; position: relative; top: -80px; ">
+                        <h3 style="text-align: center; color: white;padding-top: 18px;">Michael Barley</h3>
+                        <p style="text-align: center; color: white;padding-top: 5px;">Implant Expert</p>
+                    </div>
+
+                    <div style="font-size: 20px; text-align: center;position: relative;top: -240px; "
+                        class="icons-last">
+                        <a href="#"><i class="fa-brands fa-facebook"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus-g"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                    </div>
+
+                </div>
+
+                <div class="aar-paar">
+                    <img src="./images/11.png.webp" alt="" style="width: 330px; background-color: #f4f4f4;">
+
+                    <div style="width: 330px; height: 80px; background: linear-gradient(to right, #2c455d, #00012c);
+                    opacity: 0.85; position: relative; top: -80px; ">
+                        <h3 style="text-align: center; color: white;padding-top: 18px;">Michael Barley</h3>
+                        <p style="text-align: center; color: white;padding-top: 5px;">Implant Expert</p>
+                    </div>
+
+                    <div style="font-size: 20px; text-align: center;position: relative;top: -240px; "
+                        class="icons-last">
+                        <a href="#"><i class="fa-brands fa-facebook"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        <a href="#"><i class="fa-brands fa-google-plus-g"
+                                style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> -->
+
+        <div style="width: 80%;  margin: auto; padding: 100px 0;">
+
+            <h1 style=" text-align: center;">Our <span
+                    style="border-bottom: 5px solid #00aeef;padding: 10px 0;">Den</span>tist</h1>
+
+            <div style="padding-top: 100px; display: flex; justify-content: space-between; position: relative;">
+
+                <div class="aar-paar">
+                    <img src="./images/9.png.webp" alt="" style="width: 330px; background-color: #f4f4f4;">
+
+                    <div style="position: absolute; bottom: 0px; ">
+
+                        <div style="font-size: 20px; text-align: center;margin-bottom: 35px; " class="icons-last">
+                            <a href="#"><i class="fa-brands fa-facebook"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                            <a href="#"><i class="fa-brands fa-google-plus-g"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        </div>
+
+                        <div style="width: 330px; height: 80px; background: linear-gradient(to right, #2c455d, #00012c);
+                        opacity: 0.85;  ">
+                            <h3 style="text-align: center; color: white;padding-top: 18px;">Michael Barley</h3>
+                            <p style="text-align: center; color: white;padding-top: 5px;">Implant Expert</p>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="aar-paar">
+                    <img src="./images/10.png.webp" alt="" style="width: 330px; background-color: #f4f4f4;">
+
+                    <div style="position: absolute; bottom: 0; ">
+
+                        <div style="font-size: 20px; text-align: center; margin-bottom: 35px;" class="icons-last">
+                            <a href="#"><i class="fa-brands fa-facebook"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                            <a href="#"><i class="fa-brands fa-google-plus-g"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        </div>
+
+                        <div style="width: 330px; height: 80px; background: linear-gradient(to right, #2c455d, #00012c);
+                        opacity: 0.85;  ">
+                            <h3 style="text-align: center; color: white;padding-top: 18px;">Michael Barley</h3>
+                            <p style="text-align: center; color: white;padding-top: 5px;">Implant Expert</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="aar-paar">
+                    <img src="./images/11.png.webp" alt="" style="width: 330px; background-color: #f4f4f4;">
+
+                    <div style="position: absolute; bottom: 0; ">
+
+                        <div style="font-size: 20px; text-align: center; margin-bottom: 35px;" class="icons-last">
+                            <a href="#"><i class="fa-brands fa-facebook"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                            <a href="#"><i class="fa-brands fa-google-plus-g"
+                                    style="background-color: white;border-radius: 50%;height: 40px;width: 40px; line-height: 40px;margin: 0px 6px;"></i></a>
+                        </div>
+
+                        <div style="width: 330px; height: 80px; background: linear-gradient(to right, #2c455d, #00012c);
+                        opacity: 0.85;  ">
+                            <h3 style="text-align: center; color: white;padding-top: 18px;">Michael Barley</h3>
+                            <p style="text-align: center; color: white;padding-top: 5px;">Implant Expert</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="last-Bg1">
+            <div class="last-Bg2">
+                <div style="color: white; display: flex; padding: 100px 100px;">
+
+                    <img src="./images/8.jpg" alt="" style="border-radius: 50%;">
+
+                    <div style="font-size: 18px;
+                    font-weight: 400;font-style: italic; margin-left: 40px;">
+                        <h3>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the
+                            working day beforehand. I also had a call confirming appointment. I have been a patient ever
+                            since. My dentist is very reassuring and
+                            very helpful. Excellent treatment and advice.”</h3>
+                        <br>
+                        <h4>Arron Ramsey</h4>
+                        <br>
+                        <p>Dental Patient</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div style="width: 80%;  margin: auto;">
+
+            <h1 style=" text-align: center;padding-top: 100px;">The La<span
+                    style="border-bottom: 5px solid #00aeef;padding: 10px 0;">test</span> News</h1>
+
+            <div
+                style="padding-top: 60px; padding-bottom: 100px; display: flex; justify-content: space-between; width: 100%;">
+
+                <div style=" width: 30%;">
+
+                    <img src="./images/4.jpg" style=" width: 320px; height: 230px; background-color: #f4f4f4; ">
+
+                    <div style="box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15); padding: 20px 20px;">
+
+                        <h3 style="padding-left: 25px; padding-top: 10px;">How your mouth bacteria can harm your lungs
+                        </h3>
+
+                        <p style="padding:0 25px ; padding-top: 10px;">Donec tempor, lorem et euismod eleifend, est
+                            lectus laoreet ante, sed accusan justo diam ...</p>
+
+                        <p style="padding-left: 25px; padding-top: 10px;">
+                            <span class="last-ka-hover-hai" style="margin-right: 10px;">28 sep 2018</span>
+                            <span class="last-ka-hover-hai"> 3 Comments</span>
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+                <div style=" width: 30%;">
+                    <img src="./images/5.jpg" alt="" style="width: 320px; height: 230px; background-color: #f4f4f4;">
+                    <div style="box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15); padding: 20px 20px;">
+                        <h3 style="padding-left: 25px; padding-top: 10px;">What is the best kind of toothpaste to use?
+                        </h3>
+                        <p style="padding:10px 25px 0 25px">Donec tempor, lorem et euismod eleifend, est
+                            lectus laoreet ante, sed accusan justo diam ...</p>
+                        <p style="padding-left: 25px; padding-top: 10px;">
+                            <span class="last-ka-hover-hai" style="margin-right: 10px;">28 sep 2018</span>
+                            <span class="last-ka-hover-hai"> 3 Comments</span>
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <div style=" width: 30%; ">
+                    <img src="./images/6.jpg.webp" alt=""
+                        style="width: 320px; height: 230px; background-color: #f4f4f4;">
+                    <div style="box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.15); padding: 20px 20px;">
+                        <h3 style="padding-left: 25px; padding-top: 10px;">Why you should avoid sipping your drinks</h3>
+                        <p style="padding:0 25px ; padding-top: 10px;">Donec tempor, lorem et euismod eleifend, est
+                            lectus laoreet ante, sed accusan justo diam ...</p>
+                        <p style="padding-left: 25px; padding-top: 10px;">
+                            <span class="last-ka-hover-hai" style="margin-right: 10px;">28 sep 2018</span>
+                            <span class="last-ka-hover-hai"> 3 Comments</span>
+                        </p>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <footer>
+            <div>
+                <div class="footer">
+                    <div class="footer-dento" style="flex-grow: 1; width: 150%;">
+                        <img src="./images/logo.png.webp" alt="">
+
+                        <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa
+                            interdum dignissim.</p>
+
+                        <i class="fa-solid fa-location-dot" style="color: #00aeef;"></i>
+                        <span> 28 Jackson Street, Chicago, 7788569 USA</span>
+
+                        <br>
+
+                        <i class="fa-solid fa-phone" style="color: #00aeef;"></i>
+                        <span>+84. 2252. 2250. 122</span>
+
+                        <br>
+
+                        <i class="fa-solid fa-envelope" style="color: #00aeef;"></i>
+                        <span>info.dento@gmail.com</span>
+                    </div>
+
+                    <div class="footer-openingHours" style="flex-grow: 1; width: 100%;">
+                        <h3>Opening Hours</h3>
+                        <ul>
+                            <li><span>Mon-Wed</span> <span>8.00-18.00</span></li>
+                            <li><span>Thu-Fri</span> <span>8.00-17.00</span></li>
+                            <li><span>Sat</span> <span>9.00-17.00</span></li>
+                            <li><span>Sun</span> <span>10.00-17.00</span></li>
+                            <li><span>Holiday</span> <span>Closed</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links" style="flex-grow: 1; width: 100%;">
+                        <h3>Quick Link</h3>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Advisors</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Dentist</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Legals</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-newsletter" style="flex-grow: 1; width: 100%;">
+                        <h3>Newsletter</h3>
+                        <p>We will send out weekly newest article and some great offers</p>
+
+                        <input type="text" placeholder="Email Address">
+                        <i class="fa-solid fa-paper-plane" id="send"></i>
+
+                        <div>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="horizontalLine" style="border: 1px solid #576a7d;"></div>
+
+                <div class="copyright">
+                    Copyright &copy; 2023 All rights reserved | This template is made by <b>Omkar Patil</b>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+</body>
+
+</html>
